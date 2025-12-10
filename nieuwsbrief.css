@@ -1,28 +1,113 @@
+
+main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+
 #nieuwsbrief {
-  max-width: 500px;
-  margin: 0 auto 40px auto;
-  padding: var(--padding);
-  border-radius: var(--border-radius-default);
+    margin-top: var(--padding);
 }
 
 #nieuwsbrief h2 {
-  margin-bottom: var(--margin);
+    color: var(--accent);
+    font-size: var(--head);
+    margin-bottom: var(--margin);
 }
 
 #nieuwsbrief p {
-  margin-bottom: var(--margin);
+    font-size: var(--body);
+    margin-bottom: var(--margin);
 }
 
 
-#nieuwsbrief input[type="text"],
-#nieuwsbrief input[type="email"] {
-  width: 100%;
-  margin-top: 4px;
-  margin-bottom: 8px;
-  display: block;
+.nieuwsbrief-form p {
+    margin-bottom: var(--margin);
+}
+
+.nieuwsbrief-form label {
+    display: block;
+    font-size: var(--label);
+    margin-bottom: calc(var(--margin) / 2);
 }
 
 
-#nieuwsbrief input[type="submit"] {
-  margin-top: var(--margin);
+.nieuwsbrief-form input[type="text"],
+.nieuwsbrief-form input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    padding: var(--input-padding-y) var(--input-padding-x);
+    background-color: var(--background-inset);
+    color: var(--text);
+    border: none;
+    border-radius: var(--border-radius-default);
+    font-family: var(--font-family);
+    font-size: var(--label);
+    box-shadow: var(--shadow-inset);
+}
+
+.nieuwsbrief-form input::placeholder {
+    color: var(--background-light);
+}
+
+
+.nieuwsbrief-form input[type="submit"] {
+    padding: var(--button-padding-y) var(--button-padding-x);
+    background-color: var(--accent);
+    color: var(--background-dark);
+    border: none;
+    border-radius: var(--border-radius-default);
+    font-weight: 600;
+    font-size: var(--label);
+    cursor: pointer;
+    box-shadow: var(--shadow-button), var(--shadow-small);
+}
+
+.nieuwsbrief-form input[type="submit"]:hover {
+    background-color: var(--background-light);
+}
+
+
+
+@media (min-width: 720px) {
+
+    main {
+        max-width: 600px;
+        padding: calc(var(--padding) * 1.5);
+    }
+
+    #nieuwsbrief {
+        margin-top: calc(var(--padding) * 2);
+    }
+
+    .nieuwsbrief-form input[type="text"],
+    .nieuwsbrief-form input[type="email"] {
+        max-width: 450px;
+    }
+
+    .nieuwsbrief-form input[type="submit"] {
+        font-size: var(--subhead);
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    main {
+        max-width: 800px;
+    }
+
+    #nieuwsbrief {
+        margin-top: calc(var(--padding) * 3);
+    }
+
+    .nieuwsbrief-form input[type="text"],
+    .nieuwsbrief-form input[type="email"] {
+        max-width: 500px;
+    }
+
+    #nieuwsbrief h2 {
+        font-size: var(--headline);
+    }
 }
