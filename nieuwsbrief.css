@@ -1,0 +1,28 @@
+#nieuwsbrief {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: var(--padding);
+  border-radius: var(--border-radius-default);
+}
+
+#nieuwsbrief h2 {
+  margin-bottom: var(--margin);
+}
+
+#nieuwsbrief p {
+  margin-bottom: var(--margin);
+}
+
+
+#nieuwsbrief input[type="text"],
+#nieuwsbrief input[type="email"] {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+#nieuwsbrief input[type="submit"] {
+  margin-top: var(--margin);
+}
