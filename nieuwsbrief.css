@@ -69,9 +69,34 @@ main {
 }
 
 
+.success-message {
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: var(--margin);
+
+    background-color: var(--accent);
+    color: var(--background-dark);
+    padding: var(--padding);
+    border-radius: var(--border-radius-default);
+    font-size: var(--body);
+    font-weight: 600;
+    box-shadow: var(--shadow-small);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.success-message.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @media (min-width: 720px) {
-
     main {
         max-width: 600px;
         padding: calc(var(--padding) * 1.5);
@@ -91,9 +116,7 @@ main {
     }
 }
 
-
 @media (min-width: 1200px) {
-
     main {
         max-width: 800px;
     }
