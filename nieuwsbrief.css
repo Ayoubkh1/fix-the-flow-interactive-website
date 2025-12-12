@@ -69,11 +69,15 @@ main {
 }
 
 
+.nieuwsbrief-form.hidden {
+    display: none;
+}
+
+
 .success-message {
     display: none;
     display: flex;
     align-items: center;
-    gap: var(--margin);
 
     background-color: var(--accent);
     color: var(--background-dark);
@@ -85,9 +89,7 @@ main {
 
     opacity: 0;
     transform: translateY(-10px);
-    transition:
-        opacity 0.4s ease,
-        transform 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .success-message.show {
@@ -109,10 +111,6 @@ main {
     .nieuwsbrief-form input[type="text"],
     .nieuwsbrief-form input[type="email"] {
         max-width: 450px;
-    }
-
-    .nieuwsbrief-form input[type="submit"] {
-        font-size: var(--subhead);
     }
 }
 
